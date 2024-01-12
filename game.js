@@ -48,9 +48,9 @@ var game = new Phaser.Game(config);
 function preload() {
 
     this.load.image('sky', 'sky.png');
-    this.load.spritesheet('dude', 'dude.png', { frameWidth: 131, frameHeight: 138 });
+    this.load.spritesheet('dude', 'dude.png', { frameWidth: 128, frameHeight: 138 });
     this.load.spritesheet('jumpdude', 'jumpdude.png', { frameWidth: 131, frameHeight: 138 });
-    this.load.spritesheet('idledude', 'idledude.png', { frameWidth: 131, frameHeight: 138 });
+    this.load.spritesheet('idledude', 'idledude.png', { frameWidth: 131.2, frameHeight: 138 });
     this.load.image('ground', 'ground.png');
     this.load.image('wall', 'wall.png');
     this.load.image('platform', 'ground.png');
@@ -59,7 +59,7 @@ function preload() {
     this.load.spritesheet('bluebouncyenemy', 'bluebouncyenemy.png', { frameWidth: 128, frameHeight: 128 });
     this.load.spritesheet('redbouncyenemy', 'redbouncyenemy.png', { frameWidth: 128, frameHeight: 128 });
     this.load.image('purpleLaser', 'laser.png'); // Replace 'purpleLaser.png' with your actual purple laser image file
-    this.load.spritesheet('attack', 'attack.png', { frameWidth: 140.8, frameHeight: 138 });
+    this.load.spritesheet('attack', 'attack.png', { frameWidth: 142.1, frameHeight: 138 });
     this.load.image('leftButton', 'left.png');
     this.load.image('rightButton', 'right.png');
     this.load.image('jumpButton', 'jump.png');
@@ -512,7 +512,7 @@ this.anims.create({
         this.anims.create({
              key: 'idle',
              frames: this.anims.generateFrameNumbers('idledude', { start: 0, end: 14, first: 0 }),
-             frameRate: 40,
+             frameRate: 30,
              repeat: -1  // Set repeat to -1 for continuous looping
          });
          player.anims.play('idle');
